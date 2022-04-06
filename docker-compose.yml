@@ -1,0 +1,30 @@
+version: "3.8"
+services:
+  base:
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    command: flask run -h 0.0.0.0 -p 5000
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    volumes:
+      - ./:/app/
+    working_dir: /app
+    depends_on:
+      - db
+    networks:
+      - uniandes
+  
+  db:
+    image: postgres:13-alpine
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+    networks:
+      - uniandes
+
+networks:
+  uniandes:
