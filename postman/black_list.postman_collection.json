@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "b161b28c-3a4f-4bbd-9f1c-b55dc0fdb8e1",
+		"name": "Black list",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register email in black list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTIwNzk4NywianRpIjoiMGYyYWI3YWMtYjgwMC00NjkwLThlYTMtM2ZhOGI0MDU5ODIyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImZkc2ZkcyIsIm5iZiI6MTY0OTIwNzk4NywiZXhwIjoxNjQ5MjA4ODg3fQ.DVDfbtmORsbxdLQuvTbX2Vu1Pes5vDfvbbyN8MK_F5E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"app_id\": \"4dd6939a-b54b-11ec-b04e-308d9912cae6\",\n    \"email\": \"heraldmatias.oz@gmail.com\",\n    \"blocked_reason\": \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/blacklists",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"blacklists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get access token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"application\": \"fdsfds\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/access-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"access-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get blacklist",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTIwNzk4NywianRpIjoiMGYyYWI3YWMtYjgwMC00NjkwLThlYTMtM2ZhOGI0MDU5ODIyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImZkc2ZkcyIsIm5iZiI6MTY0OTIwNzk4NywiZXhwIjoxNjQ5MjA4ODg3fQ.DVDfbtmORsbxdLQuvTbX2Vu1Pes5vDfvbbyN8MK_F5E",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/blacklists/heraldmatias.oz@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"blacklists",
+						"heraldmatias.oz@gmail.com"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
