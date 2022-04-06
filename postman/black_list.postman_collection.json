@@ -18,7 +18,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"app_id\": \"4dd6939a-b54b-11ec-b04e-308d9912cae6\",\n    \"email\": \"heraldmatias.oz@gmail.com\",\n    \"blocked_reason\": \"test\"\n}",
+					"raw": "{\n    \"app_uuid\": \"4dd6939a-b54b-11ec-b04e-308d9912cae6\",\n    \"email\": \"heraldmatias.oz@gmail.com\",\n    \"blocked_reason\": \"test\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"

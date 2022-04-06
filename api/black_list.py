@@ -13,7 +13,7 @@ class BlackListsResource(Resource):
         ip_address = request.environ.get('HTTP_X_REAL_IP', request.remote_addr)
         new_black_list = BlackList(
             ip_address=ip_address,
-            app_id=request.json['app_id'],
+            app_uuid=request.json['app_uuid'],
             email=request.json['email'],
             blocked_reason=request.json['blocked_reason']
         )

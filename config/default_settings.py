@@ -2,7 +2,7 @@ import os
 
 
 uri = os.getenv('SQLALCHEMY_DATABASE_URI',
-                'postgresql://postgres:123456@localhost/miso')
+                'postgresql://postgres:1234@db/miso_db')
 
 
 class Config(object):
