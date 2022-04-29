@@ -3,7 +3,7 @@ from flask_restful import Api
 from flask_jwt_extended import JWTManager
 from api import (HealthCheckResource, BlackListsResource,
                  BlackListResource, ViewAuthUser)
-from api.models import db
+from db.models import db
 
 
 # Instancia de la aplicación en Flask
